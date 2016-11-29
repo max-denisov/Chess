@@ -1,0 +1,22 @@
+public class Figure 
+{	
+	
+	String color;                //black, white
+	String type;                //pawn, knight, bishop, rook, queen, king
+	int x,y;                   //coordinates [1,8]
+	
+	public Figure (String color, String type, int x, int y)
+	{
+		this.color = color;
+		this.type = type;
+		this.x = x;
+		this.y = y;
+	}
+	
+	public void move_figure (int move_x, int move_y)  //coordinates' change
+	{
+		x+=move_x;
+		y+=move_y;
+	}
+	
+}
