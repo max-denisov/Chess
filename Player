@@ -1,0 +1,22 @@
+Figure players_pieces[16]
+
+public class Player
+{
+  ArrayList<Figure> figures = new ArrayList<>();
+  String color;
+  
+  public Figure(String color)
+  {
+    this.color = color;
+    int cell_number;
+    if (color == 'white')
+      cell_number = 1;
+    else 
+      cell_number = 6;
+    // declaring figures
+    for (int i = 0; i < 8; i = i + 1) // pawns
+    {
+      Figure new_figure = new Figure(color, 'pawn', i, cell_number);
+      figures.add();
+}
+  
