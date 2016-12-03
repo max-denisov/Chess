@@ -8,15 +8,38 @@ public class Player
   public Figure(String color)
   {
     this.color = color;
+    
     int cell_number;
     if (color == 'white')
       cell_number = 1;
     else 
       cell_number = 6;
     // declaring figures
-    for (int i = 0; i < 8; i = i + 1) // pawns
+    for (int i = 0; i < 8; i = i + 1)
     {
       Figure new_figure = new Figure(color, 'pawn', i, cell_number);
-      figures.add();
+      this.figures.add(new_figure);
+    }
+    
+    if (color == 'white')
+      cell_number = 0;
+    else 
+      cell_number = ;
+    for (int i = 1; i <= 8; i = i + 7)
+    {
+      Figure new_figure = new Figure(color, 'knight', abs(i - 2), cell_number);
+      this.figures.add(new_figure);
+      new_figure = new Figure(color, 'rook', abs(i - 1), cell_number);
+      this.figures.add(new_figure);
+      new_figure = new Figure(color, 'knight', abs(i - 2), cell_number);
+      this.figures.add(new_figure);
+      new_figure = new Figure(color, 'bishop', abs(i - 2), cell_number);
+      this.figures.add(new_figure);
+    }
+    
+    Figure new_figure = new Figure(color, 'king', 4, cell_number);
+    this.figures.add(new_figure);
+    new_figure = new Figure(color, 'queen', 3, cell_number)ж
+    this.figures.add(new_figure);
 }
   
